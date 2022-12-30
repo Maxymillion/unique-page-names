@@ -1,0 +1,10 @@
+{
+	"id": "unique-page-names",
+	"name": "Unique page names",
+	"version": "0.5.0",
+	"minAppVersion": "1.1.0",
+	"description": "An Obsidian plugin to generate unique page names",
+	"author": "Maxymillion",
+	"authorUrl": "https://github.com/Maxymillion",
+	"isDesktopOnly": true
+}
