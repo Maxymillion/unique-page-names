@@ -1,2 +1,2 @@
-# unique-page-names
-A Obsidian plugin to generate unique page names
+# Unique / Generated page names
+An Obsidian plugin to generate unique page names
