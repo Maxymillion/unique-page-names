@@ -1,12 +1,9 @@
-name: Release Obsidian plugin
+name: Create release
 
 on:
     push:
         tags:
             - "*"
-
-env:
-    PLUGIN_NAME: asana-sync
 
 jobs:
     build:
@@ -25,9 +22,9 @@ jobs:
             - name: Build
               id: build
               run: |
-                  mkdir ${{ env.PLUGIN_NAME }}
-                  cp main.js manifest.json ${{ env.PLUGIN_NAME }}
-                  zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
+                  mkdir ${{ secrets.PLUGIN_NAME }}
+                  cp main.js manifest.json ${{ secrets.PLUGIN_NAME }}
+                  zip -r ${{ secrets.PLUGIN_NAME }}.zip ${{ secrets.PLUGIN_NAME }}
                   ls
                   echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
 
@@ -50,8 +47,8 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.TOKEN }}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: ./${{ env.PLUGIN_NAME }}.zip
-                  asset_name: ${{ env.PLUGIN_NAME }}-${{ steps.build.outputs.tag_name }}.zip
+                  asset_path: ./${{ secrets.PLUGIN_NAME }}.zip
+                  asset_name: ${{ secrets.PLUGIN_NAME }}-${{ steps.build.outputs.tag_name }}.zip
                   asset_content_type: application/zip
 
             - name: Upload main.js

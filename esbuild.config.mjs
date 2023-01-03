@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import {copy} from 'esbuild-plugin-copy';
 import fs from 'fs';
 import process from "process";
 import builtins from 'builtin-modules';
