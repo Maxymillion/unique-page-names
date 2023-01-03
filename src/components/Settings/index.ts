@@ -1,6 +1,6 @@
-import {App, Notice, PluginSettingTab, Setting} from "obsidian";
-import {DEFAULT_SETTINGS} from "../../utils/types";
-import UniquePageNames, {pluginName} from "../../main";
+import {App, PluginSettingTab} from "obsidian";
+import UniquePageNames from "../../main";
+import {pluginConfig} from "../../plugin.config";
 
 export class SettingsTab extends PluginSettingTab {
 	plugin: UniquePageNames;
@@ -14,8 +14,8 @@ export class SettingsTab extends PluginSettingTab {
 		const {containerEl} = this;
 
 		containerEl.empty();
-		containerEl.createEl('h1', {text: pluginName});
-		containerEl.createEl('small', {text: 'An Obsidian plugin to generate unique page names.'});
+		containerEl.createEl('h1', {text: pluginConfig.name});
+		containerEl.createEl('small', {text: pluginConfig.description});
 		containerEl.createEl('br');
 		containerEl.createEl('hr');
 

@@ -1,10 +1,8 @@
-import {Editor, MarkdownView, Notice, Plugin, TFile} from 'obsidian';
+import {Plugin} from 'obsidian';
 import {DEFAULT_SETTINGS, Settings} from "./utils/types";
 import {SettingsTab} from "./components/Settings";
 
-export const pluginName = "Unique Page Names";
-
-export default class UniquePageNames extends Plugin {
+export default class UniquePage extends Plugin {
 	settings: Settings;
 
 	async onload() {

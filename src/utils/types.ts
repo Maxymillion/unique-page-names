@@ -3,5 +3,5 @@ export interface Settings {
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-	pluginEnabled: false,
+	pluginEnabled: false
 }
