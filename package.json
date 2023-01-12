@@ -1,6 +1,6 @@
 {
-	"name": "unique-page-names",
-	"version": "0.5.0",
+	"name": "uniqueness",
+	"version": "0.5.1",
 	"description": "An Obsidian plugin to generate unique page names",
 	"main": "main.js",
 	"scripts": {

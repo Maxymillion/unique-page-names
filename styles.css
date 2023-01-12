@@ -1,9 +1,60 @@
 /* ---------------------------------------------------------------------------
-Unique page names for Obsidian by (@Maxymillion)
+Uniqueness for Obsidian by (@Maxymillion)
 
 An Obsidian plugin to generate unique page names
 
 Readme:
-https://github.com/Maxymillion/unique-page-names
+https://github.com/Maxymillion/uniqueness
 
------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.mm-dangerzone{
+	margin-top: 2rem;
+	background: #ff494f;
+	padding: 0.7rem;
+	border-bottom: 2px solid #b01015;
+	border-radius: 0.2rem;
+}
+
+.mm-dangerzone .setting-item-name{
+	color: #550000;
+}
+
+.mm-dangerzone .setting-item-description{
+	color: #550000;
+	opacity: 0.8;
+}
+
+.mm-dangerzone .setting-item{
+	border-top-color: #b0101594;
+}
+
+.mm-dangerzone .setting-item:last-of-type{
+	padding-bottom: 0;
+}
+
+.mm-dangerzone .setting-item-heading .setting-item-name{
+	font-weight: bold;
+}
+
+.mm-dangerzone .setting-item-heading .setting-item-description{
+	font-style: italic;
+	opacity: 1;
+}
+
+.mm-dangerzone .mod-warning{
+	background: transparent;
+	box-shadow: none;
+	color: #801417;
+	border: 1px solid currentColor;
+	cursor: pointer;
+}
+.mm-dangerzone .mod-warning:hover{
+	background-color: #801417;
+	border: 1px solid #801417;
+	color: #ff494f;
+}
+
+.mm-setting-invisible {
+	display: none;
+}

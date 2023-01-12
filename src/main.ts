@@ -9,6 +9,11 @@ export default class UniquePage extends Plugin {
 		await this.loadSettings();
 
 		this.addSettingTab(new SettingsTab(this.app, this));
+
+		this.registerEvent(this.app.vault.on('create', (e) => {
+			console.log('a new file has entered the arena');
+			console.log(e);
+		}));
 	}
 
 	async loadSettings() {
